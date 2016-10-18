@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<script type="text/javascript">
+window.onload = function () {
+  var chart = new CanvasJS.Chart("chartContainer",
+  {
+    theme: "theme2",
+    title:{
+      text: "Some statistics about alarms per frequency :"
+    },    
+    data: [
+    {       
+      type: "pie",
+      showInLegend: true,
+      toolTipContent: "{y} - #percent %",
+      yValueFormatString: "## Alarms",
+      legendText: "{indexLabel}",
+      dataPoints: [
+        {  y: 4181563, indexLabel: "97 MHz test1" },
+        {  y: 2175498, indexLabel: "82 MHz test2" },
+        {  y: 3125844, indexLabel: "99.2 MHz test3" },
+        {  y: 1176121, indexLabel: "103 MHz test4"},
+        {  y: 1727161, indexLabel: "105 MHz test5" },
+        {  y: 4303364, indexLabel: "87 MHz test6"},
+        {  y: 1717786, indexLabel: "900 MHz  test7"}
+      ]
+    }
+    ]
+  });
+  chart.render();
+}
+</script>
+<script type="text/javascript" src="canvasjs.min.js"></script></head>
+<body>
+<div id="chartContainer" style="height: 500px; width: 100%;"></div>
+</body>
+ </html>
