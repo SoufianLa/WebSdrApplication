@@ -1,6 +1,6 @@
 #!/bin/bash
-cd Projet/Surveillance/
-python server-surveillance.py &
+cd Surveillance/
+python app.py &
 while true
 do
     python script_alarms.py
